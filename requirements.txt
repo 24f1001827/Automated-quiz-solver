@@ -1,0 +1,53 @@
+# Web Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Browser Automation
+playwright
+selenium
+
+google-generativeai
+
+# HTTP Requests
+requests
+
+# Data Processing
+pandas
+numpy
+openpyxl
+
+# PDF Processing
+PyPDF2
+pdfplumber
+
+# Image Processing (no OCR)
+Pillow
+opencv-python
+
+# Document Processing
+python-docx
+python-pptx
+# HTML Parsing
+beautifulsoup4
+lxml
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+
+# Scientific Computing
+scipy
+scikit-learn
+
+# Geo-spatial Analysis 
+geopandas
+
+# Network Analysis 
+networkx
+
+# Utilities
+python-dotenv
+python-multipart
