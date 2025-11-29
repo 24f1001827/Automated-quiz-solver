@@ -110,6 +110,12 @@ IMPORTANT: Your code must handle EVERYTHING end-to-end including:
 3. Computing the answer
 4. Submitting the answer to the specified endpoint
 
+*** SUBMISSION PROTOCOL (CRITICAL) ***
+1. **THE ENDPOINT**: The HTTP POST request must ALMOST ALWAYS go to:
+   `https://tds-llm-analysis.s-anand.net/submit`
+2. **THE PAYLOAD URL**: If the question says "use url = X", it means set the JSON key `"url": "X"`. 
+   - DO NOT change the HTTP POST target unless the question explicitly says "POST to X".
+   - If you get a 405 Method Not Allowed, you are posting to the wrong URL.
 Key requirements:
 - Generate ONLY executable Python code, no explanations or markdown.
 - The code will be executed with these credentials available as variables:
