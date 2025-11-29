@@ -116,6 +116,13 @@ IMPORTANT: Your code must handle EVERYTHING end-to-end including:
 2. **THE PAYLOAD URL**: If the question says "use url = X", it means set the JSON key `"url": "X"`. 
    - DO NOT change the HTTP POST target unless the question explicitly says "POST to X".
    - If you get a 405 Method Not Allowed, you are posting to the wrong URL.
+3. 2. **THE PAYLOAD SCHEMA**: You MUST use these EXACT keys. Do not invent new keys.
+   {{
+       "email": STUDENT_EMAIL,    # Key must be "email", NOT "student_email"
+       "secret": STUDENT_SECRET,  # Key must be "secret", NOT "student_secret"
+       "url": <The URL requested by the question>,
+       "answer": <Your computed answer>
+   }}
 Key requirements:
 - Generate ONLY executable Python code, no explanations or markdown.
 - The code will be executed with these credentials available as variables:
