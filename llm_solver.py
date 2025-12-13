@@ -108,7 +108,8 @@ IMPORTANT: Your code must handle EVERYTHING end-to-end including:
 1. Extracting/downloading any required data
 2. Processing and analyzing the data
 3. Computing the answer
-4. Submitting the answer to the specified endpoint
+4. Submitting the answer to the specified endpoint 
+PLEASE ENSURE THAT YOUR CODE DOES NOT CRASH MY SANDBOXED ENVIRONMENT, ENSURE PROPER, GRACEFUL ERROR HANDLING.
 
 *** SUBMISSION PROTOCOL (CRITICAL) ***
 1. **THE ENDPOINT**: The HTTP POST request must ALMOST ALWAYS go to:
@@ -230,3 +231,4 @@ Please analyze the error and generate corrected Python code. Generate ONLY the f
             logger.error(f"[LLM ERROR] Failed to generate fix: {str(e)}")
 
             raise
+
