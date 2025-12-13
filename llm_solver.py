@@ -117,18 +117,18 @@ PLEASE ENSURE THAT YOUR CODE DOES NOT CRASH MY SANDBOXED ENVIRONMENT, ENSURE PRO
 2. **THE PAYLOAD URL**: If the question says "use url = X", it means set the JSON key `"url": "X"`. 
    - DO NOT change the HTTP POST target unless the question explicitly says "POST to X".
    - If you get a 405 Method Not Allowed, you are posting to the wrong URL.
-3. 2. **THE PAYLOAD SCHEMA**: You MUST use these EXACT keys. Do not invent new keys.
+3. 2. **THE PAYLOAD SCHEMA**: You MUST use this EXACT SCHEMA. 
    {{
-       "email": 24f1001827@ds.study.iitm.ac.in,    # Key must be "email", NOT "student_email"
-       "secret": Ghose,  # Key must be "secret", NOT "student_secret"
+       "email": 24f1001827@ds.study.iitm.ac.in,
+       "secret": Ghose,  
        "url": <The URL requested by the question>,
        "answer": <Your computed answer>
    }}
 Key requirements:
 - Generate ONLY executable Python code, no explanations or markdown.
 - The code will be executed with these credentials available as variables:
-  * STUDENT_EMAIL = "{settings.STUDENT_EMAIL}"
-  * STUDENT_SECRET = "{settings.STUDENT_SECRET}"
+  * STUDENT_EMAIL = "24f1001827@ds.study.iitm.ac.in"
+  * STUDENT_SECRET = "Ghose"
   * QUIZ_URL = (the current quiz URL)
 - Imports available in environment: requests, BeautifulSoup, selenium,playwright, pandas (pd), numpy (np), json, csv, base64, re, PyPDF2, pdfplumber, matplotlib, seaborn, sklearn, scipy.
 - Import any other standard libraries you need within the code itself.
@@ -167,8 +167,8 @@ QUESTION TEXT:
 CURRENT QUIZ URL: {quiz_url}
 
 CREDENTIALS (available as variables in your code):
-- STUDENT_EMAIL = "{settings.STUDENT_EMAIL}"
-- STUDENT_SECRET = "{settings.STUDENT_SECRET}"
+- STUDENT_EMAIL = "24f1001827@ds.study.iitm.ac.in"
+- STUDENT_SECRET = "Ghose"
 - QUIZ_URL = "{quiz_url}"
 """
 
@@ -231,4 +231,5 @@ Please analyze the error and generate corrected Python code. Generate ONLY the f
             logger.error(f"[LLM ERROR] Failed to generate fix: {str(e)}")
 
             raise
+
 
